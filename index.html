@@ -15,29 +15,56 @@
 </head>
 
 <body>
-    <div class="col">
+    <div class="container">
+
+        <br>
 
         <div class="row">
-            <h1>Can you guess which letter I'm thinking of?</h1>
+            <div class="col">
+
+                <h1 class="text-white text-center border border-info rounded pt-1 pb-2">Psychic Game</h1>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col">
+                <h3 class="font-italic text-info text-center">Can you guess which letter I'm thinking of?</h3>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="row">
+            <div class="col">
+                <p class="text-white text-center" id="wins">Wins: 0</p>
+            </div>
         </div>
 
         <div class="row">
-            <p id="wins">Wins: 0</p>
-        </div>
-
-        <div class="row">
-            <p id="losses">Losses: 0</p>
+            <div class="col">
+                <p class="text-white text-center" id="losses">Losses: 0</p>
+            </div>
 
         </div>
 
         <div class="row">
-            <p id="guessesLeft">Guesses remaining: 9</p>
+            <div class="col">
+                <p class="text-white text-center" id="guessesLeft">Guesses remaining: 9</p>
+            </div>
 
         </div>
 
         <div class="row">
-            <p id="guessesSoFar">Your guesses so far:</p>
+            <div class="col">
+                <p class="text-white text-center">Your guesses so far:</p>
+                <p class="text-white text-center" id="guessesSoFar"></p>
 
+            </div>
+
+        </div>
+
+        <div class="mx-auto" style="width: 65%">
+            <img class="card-img-top img-responsive" src="assets/images/Robot.png" alt="Card image cap">
         </div>
 
 

@@ -20,12 +20,14 @@ document.onkeyup = function (event) {
 
     var userGuess = event.key;
 
+    document.getElementById("guessesLeft").innerHTML = "Guesses remaining: " + guessesLeft--;
+
     if (userGuess === computerGuess) {
         console.log("You win!");
-        alert("You win!");
+        alert("You win! The answer was " + computerGuess + ".");
         document.getElementById("wins").innerHTML = 'Wins: ' + winsCount++;
         lettersGuessed = [];
-        document.getElementById("guessesSoFar").innerHTML = "Your guesses so far: " + lettersGuessed;
+        document.getElementById("guessesSoFar").innerHTML = lettersGuessed;
         document.getElementById("guessesLeft").innerHTML = "Guesses remaining: 9";
         computerGuess = computerChoice[Math.floor(Math.random() * computerChoice.length)];//variable for computer to select a random choice from the array
         guessesLeft = 9;//variable sets guesses to start nine
@@ -34,18 +36,19 @@ document.onkeyup = function (event) {
 
     } else {
         console.log("Guess again!");
-        document.getElementById("guessesLeft").innerHTML = "Guesses remaining: " + guessesLeft--;
+        console.log(lettersGuessed);
         lettersGuessed.push(userGuess);
-        document.getElementById("guessesSoFar").innerHTML = "Your guesses so far: " + lettersGuessed;
+        document.getElementById("guessesSoFar").innerHTML = lettersGuessed;
         
     }
 
     if (guessesLeft <= 0) {
         console.log("You lose!");
-        alert("You lose!");
+        alert("You lose! The answer was " + computerGuess + ".");
         document.getElementById("losses").innerHTML = 'Losses: ' + lossesCount++;
         lettersGuessed = [];
-        document.getElementById("guessesSoFar").innerHTML = "Your guesses so far: " + lettersGuessed;
+        guessesLeft = 9;
+        document.getElementById("guessesSoFar").innerHTML = lettersGuessed;
         document.getElementById("guessesLeft").innerHTML = "Guesses remaining: 9";
         computerGuess = computerChoice[Math.floor(Math.random() * computerChoice.length)];//variable for computer to select a random choice from the array
         console.log(computerGuess);
