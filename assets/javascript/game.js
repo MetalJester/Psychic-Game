@@ -21,8 +21,8 @@ document.onkeyup = function (event) {
     var userGuess = event.key;
 
     if (userGuess === computerGuess) {
-        console.log("You Win!");
-        alert("You won!");
+        console.log("You win!");
+        alert("You win!");
         document.getElementById("wins").innerHTML = 'Wins: ' + winsCount++;
         lettersGuessed = [];
         document.getElementById("guessesSoFar").innerHTML = "Your guesses so far: " + lettersGuessed;
@@ -42,9 +42,10 @@ document.onkeyup = function (event) {
 
     if (guessesLeft <= 0) {
         console.log("You lose!");
-        alert("You lost!");
+        alert("You lose!");
         document.getElementById("losses").innerHTML = 'Losses: ' + lossesCount++;
         lettersGuessed = [];
+        document.getElementById("guessesSoFar").innerHTML = "Your guesses so far: " + lettersGuessed;
         document.getElementById("guessesLeft").innerHTML = "Guesses remaining: 9";
         computerGuess = computerChoice[Math.floor(Math.random() * computerChoice.length)];//variable for computer to select a random choice from the array
         console.log(computerGuess);
