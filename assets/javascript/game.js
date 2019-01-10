@@ -20,7 +20,7 @@ document.onkeyup = function (event) {
 
     var userGuess = event.key;
 
-    document.getElementById("guessesLeft").innerHTML = "Guesses remaining: " + guessesLeft--;
+    document.getElementById("guessesLeft").innerHTML = "Guesses remaining: " + --guessesLeft;
 
     if (userGuess === computerGuess) {
         console.log("You win!");
